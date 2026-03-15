@@ -1,0 +1,329 @@
+﻿
+> vaidya-sahay@0.1.0 build
+> next build
+
+  Γû▓ Next.js 14.2.35
+  - Environments: .env
+
+   Creating an optimized production build ...
+node.exe : <w> [webpack
+.cache.PackFileCacheStr
+ategy] Skipped not 
+serializable cache 
+item 'Compilation/modul
+es|C:\Users\vishn\OneDr
+ive\Desktop\new vaidyas
+ahay\vaidya-sahay\node_
+modules\next\dist\build
+\webpack\loaders\css-lo
+ader\src\index.js??rule
+Set[1].rules[14].oneOf[
+12].use[2]!C:\Users\vis
+hn\OneDrive\Desktop\new
+ vaidyasahay\vaidya-sah
+ay\node_modules\next\di
+st\build\webpack\loader
+s\postcss-loader\src\in
+dex.js??ruleSet[1].rule
+s[14].oneOf[12].use[3]!
+C:\Users\vishn\OneDrive
+\Desktop\new vaidyasaha
+y\vaidya-sahay\src\app\
+globals.css': No 
+serializer registered 
+for PostCSSSyntaxError
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo 
+...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (<w> [webpack.   
+ ca...tCSSSyntaxErr    
+or:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+<w> while serializing w
+ebpack/lib/cache/PackFi
+leCacheStrategy.PackCon
+tentItems -> webpack/li
+b/NormalModule -> webpa
+ck/lib/ModuleBuildError
+ -> PostCSSSyntaxError
+Failed to compile.
+
+./src/app/globals.css:1
+:1
+Syntax error: C:\Users\
+vishn\OneDrive\Desktop\
+new vaidyasahay\vaidya-
+sahay\src\app\globals.c
+ss The `border-border` 
+class does not exist. 
+If `border-border` is 
+a custom class, make 
+sure it is defined 
+within a `@layer` 
+directive.
+
+[1m[31m>[39m[22m[9
+0m 1 | [39m[36m@tailw
+ind[39m 
+base[33m;[39m
+ [90m   | [39m[1m[3
+1m^[39m[22m
+ [90m 2 | [39m[36m@t
+ailwind[39m 
+components[33m;[39m
+ [90m 3 | [39m[36m@t
+ailwind[39m 
+utilities[33m;[39m
+
+./src/app/globals.css
+Syntax error: C:\Users\
+vishn\OneDrive\Desktop\
+new vaidyasahay\vaidya-
+sahay\src\app\globals.c
+ss The `border-border` 
+class does not exist. 
+If `border-border` is 
+a custom class, make 
+sure it is defined 
+within a `@layer` 
+directive. (1:1)
+
+[1m[31m>[39m[22m[9
+0m 1 | [39m[36m@tailw
+ind[39m 
+base[33m;[39m
+ [90m   | [39m[1m[3
+1m^[39m[22m
+ [90m 2 | [39m[36m@t
+ailwind[39m 
+components[33m;[39m
+ [90m 3 | [39m[36m@t
+ailwind[39m 
+utilities[33m;[39m
+
+    at 
+tryRunOrWebpackError (C
+:\Users\vishn\OneDrive\
+Desktop\new vaidyasahay
+\vaidya-sahay\node_modu
+les\next\dist\compiled\
+webpack\bundle5.js:28:3
+12989)
+    at __webpack_requir
+e_module__ (C:\Users\vi
+shn\OneDrive\Desktop\ne
+w vaidyasahay\vaidya-sa
+hay\node_modules\next\d
+ist\compiled\webpack\bu
+ndle5.js:28:131165)
+    at __nested_webpack
+_require_153728__ (C:\U
+sers\vishn\OneDrive\Des
+ktop\new vaidyasahay\va
+idya-sahay\node_modules
+\next\dist\compiled\web
+pack\bundle5.js:28:1306
+07)
+    at C:\Users\vishn\O
+neDrive\Desktop\new vai
+dyasahay\vaidya-sahay\n
+ode_modules\next\dist\c
+ompiled\webpack\bundle5
+.js:28:131454
+    at symbolIterator (
+C:\Users\vishn\OneDrive
+\Desktop\new vaidyasaha
+y\vaidya-sahay\node_mod
+ules\next\dist\compiled
+\neo-async\async.js:1:1
+4444)
+    at done (C:\Users\v
+ishn\OneDrive\Desktop\n
+ew vaidyasahay\vaidya-s
+ahay\node_modules\next\
+dist\compiled\neo-async
+\async.js:1:14824)
+    at Hook.eval [as 
+callAsync] (eval at 
+create (C:\Users\vishn\
+OneDrive\Desktop\new va
+idyasahay\vaidya-sahay\
+node_modules\next\dist\
+compiled\webpack\bundle
+5.js:13:28858), 
+<anonymous>:15:1)
+    at Hook.CALL_ASYNC_
+DELEGATE [as 
+_callAsync] (C:\Users\v
+ishn\OneDrive\Desktop\n
+ew vaidyasahay\vaidya-s
+ahay\node_modules\next\
+dist\compiled\webpack\b
+undle5.js:13:26012)
+    at C:\Users\vishn\O
+neDrive\Desktop\new vai
+dyasahay\vaidya-sahay\n
+ode_modules\next\dist\c
+ompiled\webpack\bundle5
+.js:28:130328
+    at symbolIterator (
+C:\Users\vishn\OneDrive
+\Desktop\new vaidyasaha
+y\vaidya-sahay\node_mod
+ules\next\dist\compiled
+\neo-async\async.js:1:1
+4402)
+-- inner error --
+Syntax error: C:\Users\
+vishn\OneDrive\Desktop\
+new vaidyasahay\vaidya-
+sahay\src\app\globals.c
+ss The `border-border` 
+class does not exist. 
+If `border-border` is 
+a custom class, make 
+sure it is defined 
+within a `@layer` 
+directive. (1:1)
+
+[1m[31m>[39m[22m[9
+0m 1 | [39m[36m@tailw
+ind[39m 
+base[33m;[39m
+ [90m   | [39m[1m[3
+1m^[39m[22m
+ [90m 2 | [39m[36m@t
+ailwind[39m 
+components[33m;[39m
+ [90m 3 | [39m[36m@t
+ailwind[39m 
+utilities[33m;[39m
+
+    at 
+Object.<anonymous> (C:\
+Users\vishn\OneDrive\De
+sktop\new vaidyasahay\v
+aidya-sahay\node_module
+s\next\dist\build\webpa
+ck\loaders\css-loader\s
+rc\index.js??ruleSet[1]
+.rules[14].oneOf[12].us
+e[2]!C:\Users\vishn\One
+Drive\Desktop\new vaidy
+asahay\vaidya-sahay\nod
+e_modules\next\dist\bui
+ld\webpack\loaders\post
+css-loader\src\index.js
+??ruleSet[1].rules[14].
+oneOf[12].use[3]!C:\Use
+rs\vishn\OneDrive\Deskt
+op\new vaidyasahay\vaid
+ya-sahay\src\app\global
+s.css:1:7)
+    at C:\Users\vishn\O
+neDrive\Desktop\new vai
+dyasahay\vaidya-sahay\n
+ode_modules\next\dist\c
+ompiled\webpack\bundle5
+.js:28:922493
+    at Hook.eval [as 
+call] (eval at create (
+C:\Users\vishn\OneDrive
+\Desktop\new vaidyasaha
+y\vaidya-sahay\node_mod
+ules\next\dist\compiled
+\webpack\bundle5.js:13:
+28636), 
+<anonymous>:7:1)
+    at 
+Hook.CALL_DELEGATE [as 
+_call] (C:\Users\vishn\
+OneDrive\Desktop\new va
+idyasahay\vaidya-sahay\
+node_modules\next\dist\
+compiled\webpack\bundle
+5.js:13:25906)
+    at C:\Users\vishn\O
+neDrive\Desktop\new vai
+dyasahay\vaidya-sahay\n
+ode_modules\next\dist\c
+ompiled\webpack\bundle5
+.js:28:131198
+    at 
+tryRunOrWebpackError (C
+:\Users\vishn\OneDrive\
+Desktop\new vaidyasahay
+\vaidya-sahay\node_modu
+les\next\dist\compiled\
+webpack\bundle5.js:28:3
+12943)
+    at __webpack_requir
+e_module__ (C:\Users\vi
+shn\OneDrive\Desktop\ne
+w vaidyasahay\vaidya-sa
+hay\node_modules\next\d
+ist\compiled\webpack\bu
+ndle5.js:28:131165)
+    at __nested_webpack
+_require_153728__ (C:\U
+sers\vishn\OneDrive\Des
+ktop\new vaidyasahay\va
+idya-sahay\node_modules
+\next\dist\compiled\web
+pack\bundle5.js:28:1306
+07)
+    at C:\Users\vishn\O
+neDrive\Desktop\new vai
+dyasahay\vaidya-sahay\n
+ode_modules\next\dist\c
+ompiled\webpack\bundle5
+.js:28:131454
+    at symbolIterator (
+C:\Users\vishn\OneDrive
+\Desktop\new vaidyasaha
+y\vaidya-sahay\node_mod
+ules\next\dist\compiled
+\neo-async\async.js:1:1
+4444)
+
+Generated code for C:\U
+sers\vishn\OneDrive\Des
+ktop\new vaidyasahay\va
+idya-sahay\node_modules
+\next\dist\build\webpac
+k\loaders\css-loader\sr
+c\index.js??ruleSet[1].
+rules[14].oneOf[12].use
+[2]!C:\Users\vishn\OneD
+rive\Desktop\new vaidya
+sahay\vaidya-sahay\node
+_modules\next\dist\buil
+d\webpack\loaders\postc
+ss-loader\src\index.js?
+?ruleSet[1].rules[14].o
+neOf[12].use[3]!C:\User
+s\vishn\OneDrive\Deskto
+p\new vaidyasahay\vaidy
+a-sahay\src\app\globals
+.css
+
+Import trace for 
+requested module:
+./src/app/globals.css
+
+
+> Build failed because 
+of webpack errors

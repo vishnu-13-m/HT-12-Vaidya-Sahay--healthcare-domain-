@@ -1,0 +1,121 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Hospital {
+  id               String      @id @default(cuid())
+  name             String
+  hospitalType     String      // "MAIN_BRANCH" or "SUB_BRANCH"
+  mainHospitalId   String?     // Reference to main hospital for sub-branches
+  location         String      // City/Area location
+  latitude         Float
+  longitude        Float
+  address          String?
+  contactNumber    String?
+  distanceFromMain Float?      // Distance in km from main branch
+  estimatedDeliveryTime Int?   // Estimated delivery time in minutes
+  createdAt        DateTime    @default(now())
+  updatedAt        DateTime    @updatedAt
+
+  // Relations
+  mainHospital     Hospital?   @relation("HospitalNetwork", fields: [mainHospitalId], references: [id])
+  subBranches      Hospital[]  @relation("HospitalNetwork")
+  inventories      Inventory[]
+  requestsSent     Request[]   @relation("RequestingHospital")
+  requestsReceived Request[]   @relation("SupplyingHospital")
+  patientRecords   PatientRecord[]
+  admins           HospitalAdmin[]
+}
+
+model HospitalAdmin {
+  id         String   @id @default(cuid())
+  hospitalId String
+  name       String
+  email      String   @unique
+  role       String   // "ADMIN", "STAFF"
+  createdAt  DateTime @default(now())
+
+  hospital   Hospital @relation(fields: [hospitalId], references: [id])
+}
+
+model Resource {
+  id          String      @id @default(cuid())
+  name        String      @unique // e.g., "O- Blood", "Ventilator"
+  type        String      // e.g., "Blood", "Equipment", "Medicine"
+  description String?
+  unit        String      @default("units") // "units", "liters", "mg", etc.
+  inventories Inventory[]
+  requests    Request[]
+}
+
+model Inventory {
+  id         String   @id @default(cuid())
+  hospitalId String
+  resourceId String
+  quantity   Int
+  lastUpdated DateTime @default(now())
+
+  hospital   Hospital @relation(fields: [hospitalId], references: [id])
+  resource   Resource @relation(fields: [resourceId], references: [id])
+
+  @@unique([hospitalId, resourceId])
+}
+
+model Request {
+  id                  String   @id @default(cuid())
+  resourceId          String
+  requestingHospitalId String
+  supplyingHospitalId String?
+  quantity            Int
+  status              String   @default("PENDING") // PENDING, APPROVED, REJECTED, IN_TRANSIT, DELIVERED, CANCELLED
+  emergencyPriority   Boolean  @default(false)
+  estimatedETA        Int?     // in minutes
+  approvedBy          String?  // HospitalAdmin ID who approved
+  approvedAt          DateTime?
+  notes               String?
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  resource            Resource @relation(fields: [resourceId], references: [id])
+  requestingHospital  Hospital @relation("RequestingHospital", fields: [requestingHospitalId], references: [id])
+  supplyingHospital   Hospital? @relation("SupplyingHospital", fields: [supplyingHospitalId], references: [id])
+}
+
+model Patient {
+  id           String   @id @default(cuid())
+  patientId    String   @unique // Format: PT-{year}-{sequential number}
+  name         String
+  age          Int
+  gender       String   // "MALE", "FEMALE", "OTHER"
+  phoneNumber  String
+  address      String
+  medicalHistory String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  records      PatientRecord[]
+}
+
+model PatientRecord {
+  id         String   @id @default(cuid())
+  patientId  String
+  hospitalId String
+  isActive   Boolean  @default(true) // For soft deletion
+  deletedAt  DateTime?
+  registrationDate DateTime @default(now())
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  patient    Patient  @relation(fields: [patientId], references: [id])
+  hospital   Hospital @relation(fields: [hospitalId], references: [id])
+
+  @@unique([patientId, hospitalId])
+}
